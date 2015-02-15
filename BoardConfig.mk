@@ -29,3 +29,6 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 TARGET_PREBUILT_KERNEL := device/Hisense/EG98/kernel
 
 BOARD_HAS_NO_SELECT_BUTTON := true
+BOARD_UMS_LUNFILE := "/sys/devices/platform/mt_usb/gadget/lun0/file"
+BOARD_HAS_NO_SELECT_BUTTON := true
+
