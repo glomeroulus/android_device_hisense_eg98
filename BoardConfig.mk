@@ -79,10 +79,10 @@ device/Hisense/eg98/recovery/umountusb.sh:root/umountusb.sh
 # Assert
 TARGET_OTA_ASSERT_DEVICE := EG98,msm8625q
 # Recovery
-TARGET_RECOVERY_FSTAB := device/Hisense/eg98/rootdir/etc/fstab.qcom
+TARGET_RECOVERY_FSTAB := device/Hisense/EG98/rootdir/etc/fstab.qcom
 BOARD_HAS_NO_SELECT_BUTTON := true
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
-TW_BOARD_CUSTOM_GRAPHICS := ../../../device/Hisense/eg98/recovery/tw_graphics.c
+TW_BOARD_CUSTOM_GRAPHICS := ../../../device/Hisense/EG98/recovery/tw_graphics.c
 DEVICE_RESOLUTION := 480x854
 TW_INTERNAL_STORAGE_PATH := "/internal_sd"
 TW_INTERNAL_STORAGE_MOUNT_POINT := "internal_sd"
@@ -92,7 +92,7 @@ TW_DEFAULT_EXTERNAL_STORAGE := true
 TW_FLASH_FROM_STORAGE := true
 
 BOARD_USE_CUSTOM_RECOVERY_FONT:= \"roboto_10x18.h\"
-TW_BOARD_CUSTOM_GRAPHICS := ../../../device/Hisense/eg98/recovery/twrp-graphics.c
+TW_BOARD_CUSTOM_GRAPHICS := ../../../device/Hisense/EG98/recovery/twrp-graphics.c
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
 TW_BRIGHTNESS_PATH := /sys/devices/platform/msm_fb.590337/leds/lcd-backlight/brightness
 TW_MAX_BRIGHTNESS := 255
