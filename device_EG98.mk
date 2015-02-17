@@ -9,13 +9,18 @@ DEVICE_PACKAGE_OVERLAYS += device/Hisense/EG98/overlay
 
 LOCAL_PATH := device/Hisense/EG98
 ifeq ($(TARGET_PREBUILT_KERNEL),)
-	LOCAL_KERNEL := $(LOCAL_PATH)/kernel
+	LOCAL_KERNEL := device/Hisense/EG98/kernel
 else
 	LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
+
+# Hisense blobs for recovery
+
+PRODUCT_COPY_FILES += \
+    device/Hisense/EG98/recovery/init.rc:recovery/root/init.rc \
 
 $(call inherit-product, build/target/product/full.mk)
 
