@@ -13,7 +13,6 @@ TARGET_BOOTLOADER_BOARD_NAME := EG98
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
 
-
 # Architecture
 TARGET_ARCH := arm
 TARGET_BOARD_PLATFORM := msm7x27a
@@ -25,8 +24,6 @@ TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_VARIANT := cortex-a5
 TARGET_CPU_SMP := true
 ARCH_ARM_HAVE_TLS_REGISTER := true
-
-
 
 # Partitions
 TARGET_USERIMAGES_USE_EXT4 := true
@@ -66,21 +63,20 @@ BOARD_UMS_LUNFILE := "/sys/class/android_usb/android0/f_mass_storage/lun%d/file"
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_HAS_NO_SELECT_BUTTON := true
 
-TARGET_RECOVERY_FSTAB := device/hisense/eg98/fstab.qcom
-TARGET_PREBUILT_RECOVERY_KERNEL := device/hisense/eg98/recovery-kernel
-
 # Files needed for recovery image
 PRODUCT_COPY_FILES += \
-device/Hisense/eg98/recovery/sbin/rmt_storage_recovery:/recovery/root/sbin/rmt_storage_recovery \
-device/Hisense/eg98/recovery/sbin/charger:/recovery/root/sbin/charger \
-device/Hisense/eg98/recovery/sbin/charge.sh:/recovery/root/sbin/charge.sh \
-device/Hisense/eg98/recovery/umountusb.sh:root/umountusb.sh
+device/Hisense/EG98/recovery/sbin/rmt_storage_recovery:/recovery/root/sbin/rmt_storage_recovery \
+device/Hisense/EG98/recovery/sbin/charger:/recovery/root/sbin/charger \
+device/Hisense/EG98/recovery/sbin/charge.sh:/recovery/root/sbin/charge.sh \
+device/Hisense/EG98/recovery/umountusb.sh:root/umountusb.sh
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := EG98,msm8625q
 # Recovery
-TARGET_RECOVERY_FSTAB := device/Hisense/EG98/rootdir/etc/fstab.qcom
 BOARD_HAS_NO_SELECT_BUTTON := true
+TARGET_PREBUILT_RECOVERY_KERNEL := device/Hisense/EG98/recovery-kernel
+TARGET_RECOVERY_INITRC := device/Hisense/EG98/recovery/twrp-init.rc
+TARGET_RECOVERY_FSTAB := device/Hisense/EG98/fstab.qcom
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 TW_BOARD_CUSTOM_GRAPHICS := ../../../device/Hisense/EG98/recovery/tw_graphics.c
 DEVICE_RESOLUTION := 480x854
@@ -89,12 +85,12 @@ TW_INTERNAL_STORAGE_MOUNT_POINT := "internal_sd"
 TW_EXTERNAL_STORAGE_PATH := "/sdcard"
 TW_EXTERNAL_STORAGE_MOUNT_POINT := "sdcard"
 TW_DEFAULT_EXTERNAL_STORAGE := true
+TWHAVE_SELINUX := true
+TW_USE_TOOLBOX := true
 TW_FLASH_FROM_STORAGE := true
-
+TW_TARGET_USES_QCOM_BSP := true
 BOARD_USE_CUSTOM_RECOVERY_FONT:= \"roboto_10x18.h\"
 TW_BOARD_CUSTOM_GRAPHICS := ../../../device/Hisense/EG98/recovery/twrp-graphics.c
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
 TW_BRIGHTNESS_PATH := /sys/devices/platform/msm_fb.590337/leds/lcd-backlight/brightness
 TW_MAX_BRIGHTNESS := 255
-
-
